@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="btn_radius">20dp</dimen>
+
+    <dimen name="toolbar_height">70dp</dimen>
+    <dimen name="toolbar_textsize">20sp</dimen>
+
+</resources>
