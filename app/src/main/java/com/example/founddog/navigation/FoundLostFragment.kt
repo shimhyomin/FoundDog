@@ -31,20 +31,18 @@ class FoundLostFragment : Fragment() {
         radioLost = view.findViewById(R.id.radio_lost)
         radioFound = view.findViewById(R.id.radio_found)
 
-        try {
-            radioGroup.setOnCheckedChangeListener { group, checkedId ->
+        childFragmentManager.beginTransaction().add(frame_found_lost.id, LostFragment()).commit()
+
+        radioGroup.setOnCheckedChangeListener { group, checkedId ->
+            replaceFragment(
                 when (checkedId) {
-                    R.id.radio_lost -> {
-                        text_view.setText("Lost")
-                    }
-                    R.id.radio_found -> {
-                        text_view.setText("Found")
-                    }
+                    R.id.radio_lost -> LostFragment()
+                    R.id.radio_found -> FoundFragment()
+                    else -> LostFragment()
                 }
-            }
-        } catch (e : Exception){
-            Log.d("FoundLost", "Error :" + e)
+            )
         }
+
 
     }
 
@@ -53,7 +51,7 @@ class FoundLostFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val view : View = inflater.inflate(R.layout.fragment_found_lost, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_found_lost, container, false)
 
 //        childFragmentManager.beginTransaction().add(frame_found_lost.id, FoundFragment()).commit()
 //        if(radio_lost.isChecked){
@@ -65,13 +63,11 @@ class FoundLostFragment : Fragment() {
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_found_lost, container, false)
-
-
     }
 
 
-//    private fun replaceFragment(fragment: Fragment){
-//        Log.d(MainActivity.TAG, "fragment "+fragment)
-//        childFragmentManager.beginTransaction().replace(frame_found_lost.id, fragment).commit()
-//    }
+    private fun replaceFragment(fragment: Fragment) {
+        Log.d(MainActivity.TAG, "fragment " + fragment)
+        childFragmentManager.beginTransaction().replace(frame_found_lost.id, fragment).commit()
+    }
 }
