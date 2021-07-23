@@ -9,6 +9,9 @@
     <string name="btn_register">REGISTER</string>
     <string name="btn_submit">SUBMIT</string>
 
+    <!--    upload-->
+    <string name="btn_upload">UPLOAD</string>
+
     <!--    bottom navigation -->
     <string name="menu_home">Home</string>
     <string name="menu_foun_lost">Found/Lost</string>

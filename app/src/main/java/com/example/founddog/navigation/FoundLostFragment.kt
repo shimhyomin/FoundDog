@@ -1,5 +1,6 @@
 package com.example.founddog.navigation
 
+import android.content.Intent
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
@@ -12,6 +13,7 @@ import android.widget.RadioGroup
 import androidx.fragment.app.FragmentActivity
 import com.example.founddog.MainActivity
 import com.example.founddog.R
+import com.example.founddog.UploadActivity
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,12 +26,16 @@ class FoundLostFragment : Fragment() {
     private lateinit var radioLost: RadioButton
     private lateinit var radioFound: RadioButton
 
+    private lateinit var fab: View
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         radioGroup = view.findViewById(R.id.radiogroup_found_lost)
         radioLost = view.findViewById(R.id.radio_lost)
         radioFound = view.findViewById(R.id.radio_found)
+
+        fab = view.findViewById(R.id.fab)
 
         childFragmentManager.beginTransaction().add(frame_found_lost.id, LostFragment()).commit()
 
@@ -43,6 +49,9 @@ class FoundLostFragment : Fragment() {
             )
         }
 
+        fab.setOnClickListener { view ->
+            startActivity(Intent(context, UploadActivity::class.java))
+        }
 
     }
 
@@ -52,15 +61,6 @@ class FoundLostFragment : Fragment() {
     ): View? {
 
         val view: View = inflater.inflate(R.layout.fragment_found_lost, container, false)
-
-//        childFragmentManager.beginTransaction().add(frame_found_lost.id, FoundFragment()).commit()
-//        if(radio_lost.isChecked){
-//            replaceFragment(FoundFragment())
-//        }else{
-//            replaceFragment(LostFragment())
-//        }
-
-
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_found_lost, container, false)
     }
