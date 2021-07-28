@@ -22,7 +22,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Log.d(TAG, "Main : start")
+
         supportFragmentManager.beginTransaction().add(frame_content.id, HomeFragment()).commit()
+        Log.d(TAG, "Main : start1")
         bottom_navigation.setOnItemSelectedListener {
             Log.d(TAG, "item_id : "+it.itemId)
             replaceFragment(
@@ -33,6 +36,7 @@ class MainActivity : AppCompatActivity() {
                     else -> HomeFragment()
                 }
             )
+            Log.d(TAG, "Main : start2")
             true
         }
     }

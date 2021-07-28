@@ -21,5 +21,9 @@
     <string name="tab_lost">찾고있어요</string>
     <string name="tab_found">발견했어요</string>
 
+    <!--    error message-->
+    <string name="error_fill_title">title을 입력하세요.</string>
+    <string name="error_fill_content">content을 입력하세요.</string>
+    <string name="error_fill_image">image을 입력하세요.</string>
 
 </resources>
