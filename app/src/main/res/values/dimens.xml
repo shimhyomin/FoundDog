@@ -4,6 +4,9 @@
     <dimen name="btn_radius">20dp</dimen>
 
     <dimen name="toolbar_height">70dp</dimen>
-    <dimen name="toolbar_textsize">20sp</dimen>
+    <dimen name="toolbar_text_size">20sp</dimen>
 
+    <!--  preview  -->
+    <dimen name="preview_img_size">100dp</dimen>
+    <dimen name="preview_text_size">30sp</dimen>
 </resources>
