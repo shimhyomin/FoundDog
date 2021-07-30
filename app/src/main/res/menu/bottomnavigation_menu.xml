@@ -11,7 +11,7 @@
         android:id="@+id/menu_found_lost"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_pet"
-        android:title="@string/menu_foun_lost" />
+        android:title="@string/menu_found_lost" />
     <item
         android:id="@+id/menu_chatting"
         app:showAsAction="ifRoom"
