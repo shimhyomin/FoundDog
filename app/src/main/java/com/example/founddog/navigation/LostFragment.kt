@@ -87,7 +87,8 @@ class LostFragment : Fragment() {
         override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
             var viewholder = (holder as ViewHolder).itemView
 
-            var img: ImageView = viewholder.findViewById(R.id.img_recycle)
+            // Glide에서 NullPointer Error가 나기 때문에에
+           var img: ImageView = viewholder.findViewById(R.id.img_recycle)
 
             Log.d(TAG, "onBindViewHolder")
             Log.d(TAG, "imgUrl : " + postDTO[position].imgUrl)
@@ -98,7 +99,9 @@ class LostFragment : Fragment() {
             viewholder.text_recycle.text = postDTO[position].title
 
             holder.itemView.setOnClickListener {
-                startActivity(Intent(context, DetailActivity::class.java))
+                val intent = Intent(context, DetailActivity::class.java)
+                intent.putExtra("itemKey", postDTO[position])
+                startActivity(intent)
             }
         }
 
