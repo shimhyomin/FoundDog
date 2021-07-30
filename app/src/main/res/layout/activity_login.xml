@@ -11,7 +11,9 @@
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/edt_margin_left_right"
+        android:layout_marginRight="@dimen/edt_margin_left_right">
         <EditText
             android:id="@+id/edt_email"
             android:layout_width="match_parent"
@@ -23,7 +25,10 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:passwordToggleEnabled="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/edt_margin_left_right"
+        android:layout_marginRight="@dimen/edt_margin_left_right"
+        android:layout_marginBottom="@dimen/btn_edt_margin">
         <EditText
             android:id="@+id/edt_pwd"
             android:layout_width="match_parent"
@@ -37,6 +42,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
+        android:layout_marginLeft="@dimen/btn_margin_left_right"
+        android:layout_marginRight="@dimen/btn_margin_left_right"
+        android:layout_marginBottom="@dimen/btn_margin_top_bottom"
+        android:layout_marginTop="@dimen/btn_edt_margin"
         android:text="@string/btn_login"/>
 
     <Button
@@ -44,6 +53,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/button"
+        android:layout_marginLeft="@dimen/btn_margin_left_right"
+        android:layout_marginRight="@dimen/btn_margin_left_right"
+        android:layout_marginTop="@dimen/btn_margin_top_bottom"
         android:text="@string/btn_register"/>
 
 </LinearLayout>
