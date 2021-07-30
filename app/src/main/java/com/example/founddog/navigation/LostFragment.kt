@@ -15,6 +15,7 @@ import com.example.founddog.R
 import com.example.founddog.model.PostDTO
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.fragment_lost.*
 import kotlinx.android.synthetic.main.item_posting_recyclerview.*
 import kotlinx.android.synthetic.main.item_posting_recyclerview.view.*
@@ -58,7 +59,7 @@ class LostFragment : Fragment() {
 
         init {
             Log.d(TAG, "RecyclerViewAdapter init")
-            firestore?.collection("PostLost")?.orderBy("timestamp")
+            firestore?.collection("PostLost")?.orderBy("timestamp", Query.Direction.DESCENDING)
                 ?.addSnapshotListener { querySnapshot, firebaseFirestoreException ->
                     postDTO.clear()
 
