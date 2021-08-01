@@ -3,15 +3,23 @@
 
     <dimen name="btn_radius">25dp</dimen>
 
-    <dimen name="btn_margin_top_bottom">2dp</dimen>
-    <dimen name="btn_margin_left_right">25dp</dimen>
-    <dimen name="edt_margin_top_bottom">10dp</dimen>
-    <dimen name="edt_margin_left_right">25dp</dimen>
-    <dimen name="btn_edt_margin">20dp</dimen>
+    <dimen name="btn_margin_top_bottom">5dp</dimen>
+    <dimen name="btn_margin_left_right">35dp</dimen>
+    <dimen name="edt_margin_top_bottom">5dp</dimen>
+    <dimen name="edt_margin_left_right">17dp</dimen>
+    <dimen name="btn_edt_margin">30dp</dimen>
 
     <dimen name="back_clear_margin">10dp</dimen>
+
+    <!--  toolbar  -->
+    <dimen name="toolbar_height">60dp</dimen>
 
     <!--  preview  -->
     <dimen name="preview_img_size">100dp</dimen>
     <dimen name="preview_title_size">20sp</dimen>
+
+    <!--  UploadActivity  -->
+    <dimen name="stroke_width">1dp</dimen>
+    <dimen name="uploadbtn_margin_bottom">30dp</dimen>
+    <dimen name="margin_top_bottom">10dp</dimen>
 </resources>

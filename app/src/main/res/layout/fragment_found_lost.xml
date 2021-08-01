@@ -18,13 +18,13 @@
             <RadioGroup
                 android:id="@+id/radiogroup_found_lost"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/toolbar_height"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/radio_lost"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:checked="true"
                     android:button="@null"
@@ -35,7 +35,7 @@
                 <RadioButton
                     android:id="@+id/radio_found"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:button="@null"
                     android:background="@drawable/radio_button_found_lost"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:src="@drawable/ic_baseline_create"
-        android:backgroundTint="@color/purple_500"
+        android:backgroundTint="@color/purple_700"
         android:contentDescription="write fab"
         app:tint="@color/white"
         app:borderWidth="0dp"
